@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<title>Page list</title>
+</head>
+<body class="body">
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<div>
+				<span class="navbar-brand glyphicon glyphicon-chevron-left"></span>
+				<a class="navbar-brand" href="#">Pages</a>
+				<span class="navbar-brand pull-right glyphicon glyphicon-plus"></span>
+			</div>
+		</div>
+	</div>
+</nav>
+<div class="container">
+	<div ng-repeat="website in websites">
+		<p>
+			Blog Post
+			<span ng-click="openWebsite(website._id)" class="glyphicon glyphicon-cog pull-right"></span>
+		</p>
+		<p>
+			Blogs
+			<span ng-click="openWebsite(website._id)" class="glyphicon glyphicon-cog pull-right"></span>
+		</p>
+		<p>
+			Home
+			<span ng-click="openWebsite(website._id)" class="glyphicon glyphicon-cog pull-right"></span>
+		</p>
+		<p>
+			About
+			<span ng-click="openWebsite(website._id)" class="glyphicon glyphicon-cog pull-right"></span>
+		</p>
+		<p>
+			Contact Us
+			<span ng-click="editWebsite(website._id)" class="glyphicon glyphicon-cog pull-right"></span>
+		</p>
+	</div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<div>
+				<span class="navbar-brand pull-right glyphicon glyphicon-user"></span>
+			</div>
+		</div>
+</nav>
+</body>
+</html>
